@@ -37,22 +37,15 @@ ip4ToList s = case dropWhile (== '.')  s of
                   where (w, s'') = break (== '.') s'
                         w' = (read w) :: Word8
                         
-hostTuple :: (Word8, Word8, Word8, Word8)
-hostTuple = (127,0,0,1)
-
-
 inPort :: PortNumber
 inPort = 33434
 
 oscPort :: PortNumber
 oscPort = 3333
 
-maxCnx :: Int
-maxCnx = 1024
 
 triesPerTTL :: Int
 triesPerTTL = 3
-
 
 maxRecv :: Int
 maxRecv = 1024 -- max bytes received
